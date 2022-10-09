@@ -1,7 +1,7 @@
 class City: 
     def __init__(self, city_name, country, visited, id = None):
         self.city_name = city_name
-        self.country = country
+        self.country_id = country
         self.visited = visited
         self.id = id
 

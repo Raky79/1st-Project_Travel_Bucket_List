@@ -27,7 +27,7 @@ def select(id):
     city = None
     sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
-    result = run_sql(sql,values)
+    results = run_sql(sql,values)
 
     if results:
         result = result[0]

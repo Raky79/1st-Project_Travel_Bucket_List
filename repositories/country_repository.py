@@ -23,12 +23,13 @@ def select_all():
     return countries
 
 def select(id): 
-    city = None
+    country = None
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
-    result = run_sql(sql,values)[0]
+    results = run_sql(sql,values)[0]
     
-    if result is not None: 
+    if results: 
+        result = results[0]
         country = Country(result['country_name'], result['visited'], result['id'])
     return country
 
@@ -45,5 +46,17 @@ def update(country):
     sql = "UPDATE countries SET (country_name, visited) = (%s, %s) WHERE id = %s"
     values = [country.country_name, country.visited, country.id]
     run_sql(sql, values)
+
+def cities(country):
+    cities = []
+
+    sql= "SELECT * FROM cities WHERE country_id = %s"
+    values = [country.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        city = City(row['city_name'], row['country_id'], row['visited'], row['id'])
+        cities.append(city)
+    return cities
 
 
