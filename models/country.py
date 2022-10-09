@@ -1,4 +1,8 @@
 class Country: 
-    def __init__(self, country_name, id = None):
+    def __init__(self, country_name, visited, id = None):
         self.country_name = country_name
+        self.visited = visited
         self.id = id
+
+    def mark_visited(self):
+        self.visited = True    

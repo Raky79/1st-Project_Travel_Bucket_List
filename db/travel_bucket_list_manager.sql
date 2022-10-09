@@ -11,5 +11,5 @@ CREATE TABLE cities (
   id SERIAL PRIMARY KEY,
   city_name VARCHAR(255),
   visited BOOLEAN,
-  city_id INT NOT NULL REFERENCES cities(id)
+  country_id INT NOT NULL REFERENCES countries(id)
 );
