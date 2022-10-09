@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 from models.country import Country
 from models.city import City
+from repositories import city_repository
 
 def save(country):
     sql = "INSERT INTO countries(country_name, visited) VALUES (%s, %s) RETURNING *"
