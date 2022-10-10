@@ -5,8 +5,8 @@ from models.country import Country
 import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
 
-country_repository.delete_all()
 city_repository.delete_all()
+country_repository.delete_all()
 
 country1 = Country("Spain", True)
 country_repository.save(country1)
@@ -26,8 +26,28 @@ city_repository.save(city2)
 city3 = City("Oslo", country3, False)
 city_repository.save(city3)
 
-country_repository.select_all()
+all_countries = country_repository.select_all()
+all_cities = city_repository.select_all()
+
+for country in all_countries:
+    print(country.__dict__)
+
+for city in all_cities:
+    print(city.__dict__)
+
+# city2.mark_visited()
+# city_repository.update(city2)
+# city2_test = city_repository.select(city2.id)
+
+# # city_repository.delete(city2.id)
+# city2_test = city_repository.select(city2.id)
+
+# country2.mark_visited()
+# country_repository.update(country2)
+# country2_test = country_repository.select(country2.id)
+
+# country_repository.delete(country2.id)            
+# country2_test = country_repository.select(country2.id)
+
 
 pdb.set_trace()
-
-breakpoint()

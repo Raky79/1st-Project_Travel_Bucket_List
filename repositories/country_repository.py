@@ -27,7 +27,7 @@ def select(id):
     country = None
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
-    results = run_sql(sql,values)[0]
+    results = run_sql(sql,values)
     
     if results: 
         result = results[0]
