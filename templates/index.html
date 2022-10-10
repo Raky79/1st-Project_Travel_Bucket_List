@@ -1,47 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Travel Bucket List</title>
-</head>
-<body>
-    <header>
-        <h1>Travel Bucket List</h1>
-        {% for city in cities %}
-        <div>
-            <p>
-                {{ city.name }}: <b>{{ city.country }}</b> 
-                {% if city.visited %}
-                <span>&#9989;</span>
-                {% endif %}
-            </p>
-        </div>
-        {% endfor %}
-       <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/about">About</a>
-            </li>
-            <li>
-                <a href="/cities">Cities</a>
-            </li>
-        </ul>
-       </nav>
+{% extends 'base.html' %}
 
-
-    </header>
-
-    <main>
-
-    </main>
-    
-    <footer>
-
-    </footer>
-</body>
-</html>
+{% block content %}
+<h1>Travel Bucket List</h1>
+{% endblock %}
