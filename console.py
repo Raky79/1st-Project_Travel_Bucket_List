@@ -24,6 +24,7 @@ city2 = City("Helsinki", country2, False)
 city_repository.save(city2)
 
 city3 = City("Oslo", country3, False)
+city_repository.save(city3)
 
 country_repository.select_all()
 
