@@ -30,7 +30,7 @@ def select(id):
     results = run_sql(sql,values)
 
     if results:
-        result = result[0]
+        result = results[0]
         country = country_repository.select(result["country_id"])
         city = City(result['name'], country, result['visited'], result['id'])
     return city
