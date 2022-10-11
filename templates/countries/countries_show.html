@@ -14,10 +14,13 @@
         </p>
         <p><a href="/countries/{{ country.id }}/edit" >Edit</a></p>
     </div>
+
+
     <div>
         <h2>Cities in {{ country.name }}</h2>
         <div>
             {% for city in country_cities  %}
+
                 <p>{{ city.name }}</p>
                 <p>
                     Visited: 
