@@ -5,9 +5,12 @@ import repositories.city_repository as city_repository
 
 cities_blueprint = Blueprint("cities", __name__)
 
+#index 
+
 @cities_blueprint.route("/cities")
 def cities():
     cities = city_repository.select_all()
     return render_template("cities/index.html", cities = cities)
+    
 
 
