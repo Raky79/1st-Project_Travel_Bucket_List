@@ -2,11 +2,17 @@
 
 {% block content %}
 
-<form action="/countries/{{ country.id }}" method="get">
+<form action="/countries/{{ country.id }}" method="post">
     <label for="name">Country Name:</label>
     <input type="text" name="name" id="name" value="{{country.name}}" >
     <label for="visited">Visited:</label>
+    <select name="visited" id="visited">
+        <option value="true" {% if country.visited %} selected {% endif %}>&#9989</option>
+        <option value="false" {% if not country.visited %} selected {% endif %}>&#10060</option>
     <input type="checkbox" name="visited" id="visited" value="{{country.visited}}">
+    </select>
+    </div>
+
     <input type="submit" value="Update Country"> 
 </form>
 
