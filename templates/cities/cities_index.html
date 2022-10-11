@@ -2,9 +2,8 @@
 
 {% block content %}
 <h2>Cities</h2>
-{{ all_cities }}
 
-{% for cities in all_cities %}
+{% for city in all_cities %}
 <div class="cities">
     <div class="content">
         <p><a href="/cities/{{ city.id }}">{{ city.name }}</a></p>

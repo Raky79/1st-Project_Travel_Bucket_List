@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{ city.name }}</p>
+    <p>
+        Visited: 
+        {% if city.visited %}
+            <span>&#9989</span>
+        {% else %}
+            <span>&#10060</span>
+        {% endif %}
+    </p>
+    <p>
+      <a href="/countries/{{ city.country.id }}">{{ city.country.name }}</a>
+     
+    </p>
+  </div>
+
+{% endblock %}

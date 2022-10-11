@@ -3,6 +3,8 @@ from models.country import Country
 from models.city import City
 from repositories import city_repository
 
+
+#CREATE
 def save(country):
     sql = "INSERT INTO countries(name, visited) VALUES (%s, %s) RETURNING *"
     values = [country.name, country.visited]
@@ -11,7 +13,7 @@ def save(country):
     country.id = id
     return country
 
-
+#READ
 def select_all():
     countries = []
     
@@ -34,20 +36,6 @@ def select(id):
         country = Country(result['name'], result['visited'], result['id'])
     return country
 
-def delete_all():
-    sql = "DELETE FROM countries"
-    run_sql(sql)
-
-def delete(id):
-    sql = "DELETE FROM countries WHERE id = %s"
-    values = [id]
-    run_sql(sql, values)
-
-def update(country): 
-    sql = "UPDATE countries SET (name, visited) = (%s, %s) WHERE id = %s"
-    values = [country.name, country.visited, country.id]
-    run_sql(sql, values)
-
 def cities(country):
     cities = []
 
@@ -59,5 +47,24 @@ def cities(country):
         city = City(row['name'], country, row['visited'], row['id'])
         cities.append(city)
     return cities
+
+#UPDATE
+def update(country): 
+    sql = "UPDATE countries SET (name, visited) = (%s, %s) WHERE id = %s"
+    values = [country.name, country.visited, country.id]
+    run_sql(sql, values)
+
+#DELETE
+def delete_all():
+    sql = "DELETE FROM countries"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+
 
 
