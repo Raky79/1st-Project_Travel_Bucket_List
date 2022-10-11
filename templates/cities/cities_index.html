@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Cities</h1>
+<h2>Cities</h2>
+{{ all_cities }}
+
+{% for cities in all_cities %}
+<div class="cities">
+    <div class="content">
+        <p><a href="/cities/{{ city.id }}">{{ city.name }}</a></p>
+        <p>
+            Visited: 
+            {% if city.visited %}
+                <span>&#9989</span>
+            {% else %}
+                    <span>&#10060</span>
+            {% endif %}
+        </p>
+    </div>
+</div>
+{% endfor %}
+
 {% endblock %}

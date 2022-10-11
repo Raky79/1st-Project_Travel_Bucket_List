@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{ country.name }}</p>
+    <p>
+        Visited: 
+        {% if country.visited %}
+            <span>&#9989</span>
+        {% else %}
+            <span>&#10060</span>
+        {% endif %}
+    </p>
+    <h2>Cities in {{ country.name }}</h2>
+    <div>
+        {% for city in country_cities  %}
+            <p>{{ city.name }}</p>
+            <p>
+                Visited: 
+                {% if city.visited %}
+                    <span>&#9989</span>
+                {% else %}
+                    <span>&#10060</span>
+                {% endif %}
+            </p>
+        {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
