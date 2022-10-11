@@ -39,15 +39,18 @@ city2.mark_visited()
 city_repository.update(city2)
 city2_test = city_repository.select(city2.id)
 
-city_repository.delete(city2.id)
-city2_test = city_repository.select(city2.id)
+# city_repository.delete(city2.id)
+# city2_test = city_repository.select(city2.id)
 
 country2.mark_visited()
 country_repository.update(country2)
 country2_test = country_repository.select(country2.id)
 
-country_repository.delete(country2.id)            
-country2_test = country_repository.select(country2.id)
+# country_repository.delete(country2.id)            
+# country2_test = country_repository.select(country2.id)
+
+country2_cities = country_repository.cities(country2)
+
 
 
 pdb.set_trace()
