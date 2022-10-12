@@ -5,6 +5,6 @@ class Country:
         self.id = id
  
 
-def mark_visited(self):
-        self.visited = True    
+    def mark_visited(self):
+            self.visited = True    
     

@@ -42,6 +42,8 @@ city2_test = city_repository.select(city2.id)
 city_repository.delete(city2.id)
 city2_test = city_repository.select(city2.id)
 
+
+
 country2.mark_visited()
 country_repository.update(country2)
 country2_test = country_repository.select(country2.id)
