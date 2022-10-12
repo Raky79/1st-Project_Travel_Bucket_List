@@ -2,6 +2,23 @@
 
 {% block content %}
 
+<form action="/cities" method="post">
+    <label for="name">City Name:</label>
+    <input type="text" name="name" id="name">
+
+    <label for="visited">Visited:</label>
+    <input type="checkbox" name="visited" id="visited">
+
+    <label for="country">Country:</label>
+    <select id="country" name="country_id">
+        {% for country in all_countries %}
+        <option value="{{ country.id }}">{{ country.name }}</option>
+        {% endfor %}
+    </select>
+    
+    <input type="submit" value="Add City"> 
+</form>
+
 <h2>Cities</h2>
 
 {% for city in all_cities %}
@@ -16,6 +33,7 @@
                     <span>&#10060</span>
             {% endif %}
         </p>
+        <p><a href="/cities/{{ city.id }}/delete" >Delete</a></p>
     </div>
 </div>
 {% endfor %}
