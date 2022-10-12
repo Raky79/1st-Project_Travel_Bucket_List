@@ -17,7 +17,7 @@ country_repository.save(country2)
 country3 = Country("Norway", False)
 country_repository.save(country3)
 
-city1 = City("Barcelona", country1, True)
+city1 = City("Tenerife", country1, True)
 city_repository.save(city1)
 
 city2 = City("Helsinki", country2, False)
@@ -39,15 +39,15 @@ city2.mark_visited()
 city_repository.update(city2)
 city2_test = city_repository.select(city2.id)
 
-# city_repository.delete(city2.id)
-# city2_test = city_repository.select(city2.id)
+city_repository.delete(city2.id)
+city2_test = city_repository.select(city2.id)
 
 country2.mark_visited()
 country_repository.update(country2)
 country2_test = country_repository.select(country2.id)
 
-# country_repository.delete(country2.id)            
-# country2_test = country_repository.select(country2.id)
+country_repository.delete(country2.id)            
+country2_test = country_repository.select(country2.id)
 
 country2_cities = country_repository.cities(country2)
 
