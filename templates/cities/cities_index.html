@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<h3>Add city to the list:</h3>
+
 <form action="/cities" method="post">
     <label for="name">City Name:</label>
     <input type="text" name="name" id="name">
@@ -33,6 +35,7 @@
                     <span>&#10060</span>
             {% endif %}
         </p>
+        <p><a href="/cities/{{ city.id }}/edit" >Edit</a></p>
         <p><a href="/cities/{{ city.id }}/delete" >Delete</a></p>
     </div>
 </div>

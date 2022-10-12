@@ -26,6 +26,7 @@ def edit_city(id):
     city = city_repository.select(id)
     return render_template('cities/edit.html', city=city)
 
+
 @cities_blueprint.route('/cities/<id>', methods=['POST'])
 def update_city(id):
     name = request.form['name']
@@ -33,6 +34,7 @@ def update_city(id):
     city = City(name, visited, id)
     city_repository.update(city)
     return redirect('/cities')
+
 
 @cities_blueprint.route("/cities", methods = ['POST'])
 def create_city():
