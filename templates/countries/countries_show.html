@@ -16,28 +16,7 @@
         <p><a href="/countries/{{ country.id }}/edit" >Edit</a></p>
         <p><a href="/countries/{{ country.id }}/delete" >Delete</a></p>
     </div>
-    <!-- <div>
-        <h3>Add City:</h3>
-        <form action="/cities" method="post">
-            <label for="name">City Name:</label>
-            <input type="text" name="name" id="name">
 
-            <label for="visited">Visited:</label>
-            <input type="checkbox" name="visited" id="visited">
-
-             <div>
-                <label for="country">Country:</label>
-                <select id="country" name="country_id">
-                    {% for country in all_countries %}
-                    <option value="{{ country.id }}">{{ country.name }}</option>
-                    {% endfor %}
-                </select>
-             </div>
-
-            <input type="submit" value="Add City"> 
-        </form>
-
-    </div> -->
     <div>
         <h2>Cities in {{ country.name }}</h2>
         <div>
