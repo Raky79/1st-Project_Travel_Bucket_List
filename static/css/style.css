@@ -63,6 +63,18 @@ nav > ul > li > a {
     text-decoration: underline;
 }
 
+#add_city {
+    color:rgb(168, 239, 168);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#add_country {
+    color:rgb(168, 239, 168);
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .submit {
     background-color: rgba(10, 191, 10, 0.785);
     border: 1px solid greenyellow;
@@ -97,12 +109,12 @@ input[type="submit"] {
     width: 30%;
     font-weight: bold;
     font-size: 20px;
-    color: rgb(23, 195, 89)
+    color: rgb(23, 195, 89);
 }
 
 .cities {
     text-align: center;
-    background-color: rgba(210, 255, 127, 0.262);
+    background-color:rgba(210, 255, 127, 0.262);
     margin: auto;
     width: 30%;
     font-weight: bold;
