@@ -1,0 +1,36 @@
+body {
+    font-family: "Merriweather", sans-serif;
+    background: url('/static/images/background1.jpg');
+    background-size: cover;
+    color: rgb(168, 239, 168);
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body > header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(93, 228, 243, 0.366);
+    margin: auto;
+    width: 50%;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+nav > ul > li > a {
+    color: white;
+}
+
+#logo {
+    margin: auto;
+    width: 30%;
+    font-family:  "Merriweather", sans-serif;
+}
+
+#title {
+    margin: 0;
+    font-family: "Merriweather", sans-serif;
+}
+
