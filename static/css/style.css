@@ -44,6 +44,23 @@ nav > ul > li > a {
     font-family: "Merriweather", sans-serif;
     text-align: center;
     font-size: 30px;
+    text-decoration: underline;
+}
+
+#title_cities {
+    margin: auto;
+    font-family: "Merriweather", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#cities_in {
+    margin: auto;
+    font-family: "Merriweather", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 .submit {
@@ -75,4 +92,20 @@ input[type="submit"] {
 
 .country {
     text-align: center;
+    background-color: rgba(210, 255, 127, 0.262);
+    margin: auto;
+    width: 30%;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(23, 195, 89)
+}
+
+.cities {
+    text-align: center;
+    background-color: rgba(210, 255, 127, 0.262);
+    margin: auto;
+    width: 30%;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(23, 195, 89);
 }
