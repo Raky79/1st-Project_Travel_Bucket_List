@@ -26,7 +26,7 @@
 {% for city in all_cities %}
 <div class="cities">
     <div class="content">
-        <p><a class="city" href="/cities/{{ city.id }}">{{ city.name }}</a></p>
+        <p><a class="city_name" href="/cities/{{ city.id }}">{{ city.name }}</a></p>
         <p>
             Visited: 
             {% if city.visited %}

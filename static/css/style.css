@@ -52,6 +52,11 @@ nav > ul > li > a {
     color: white;
 }
 
+input[type="submit"] {
+    text-transform: uppercase;
+    font-family: "Merriweather", sans-serif;
+  }
+
 .edit {
     color: white;
 }
@@ -60,10 +65,14 @@ nav > ul > li > a {
     color: white;
 }
 
-.city {
+.city_name {
     color:aliceblue;
 }
 
-.country {
+.country_name {
     color: aliceblue;
+}
+
+.country {
+    text-align: center;
 }
