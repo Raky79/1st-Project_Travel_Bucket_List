@@ -30,7 +30,13 @@ nav > ul > li > a {
 }
 
 #title {
-    margin: 0;
+    margin: auto;
     font-family: "Merriweather", sans-serif;
+    width: 30%;
 }
 
+.submit {
+    background-color: rgba(10, 191, 10, 0.785);
+    border: 1px solid greenyellow;
+    color: white;
+}
