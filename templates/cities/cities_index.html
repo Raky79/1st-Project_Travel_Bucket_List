@@ -26,7 +26,7 @@
 {% for city in all_cities %}
 <div class="cities">
     <div class="content">
-        <p><a href="/cities/{{ city.id }}">{{ city.name }}</a></p>
+        <p><a class="city" href="/cities/{{ city.id }}">{{ city.name }}</a></p>
         <p>
             Visited: 
             {% if city.visited %}
@@ -35,8 +35,8 @@
                     <span>&#10060</span>
             {% endif %}
         </p>
-        <p><a href="/cities/{{ city.id }}/edit" >Edit</a></p>
-        <p><a href="/cities/{{ city.id }}/delete" >Delete</a></p>
+        <p><a class= "edit" href="/cities/{{ city.id }}/edit" >Edit</a></p>
+        <p><a class= "delete" href="/cities/{{ city.id }}/delete" >Delete</a></p>
     </div>
 </div>
 {% endfor %}

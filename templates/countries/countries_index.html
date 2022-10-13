@@ -17,7 +17,7 @@
 {% for country in all_countries %}
 <div class="country">
     <div class="content">
-        <p><a href="/countries/{{ country.id }}">{{ country.name }}</a></p>
+        <p><a class="country" href="/countries/{{ country.id }}">{{ country.name }}</a></p>
         <p>
             Visited: 
             {% if country.visited %}
