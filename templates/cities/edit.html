@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <form action="/city/{{ city.id }}" method="post">
+    <form action="/cities/{{ city.id }}" method="post">
         <label for="name">City Name:</label>
         <input type="text" name="name" id="name" value="{{city.name}}" >
     
@@ -10,6 +10,17 @@
             <option value="true" {% if city.visited %} selected {% endif %}>&#9989</option>
             <option value="false" {% if not city.visited %} selected {% endif %}>&#10060</option>
         </select>
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country_id">
+              {% for country in all_countries %}
+                <option value="{{ country.id }}"
+                  {% if city.country.id == country.id %} selected="selected"{% endif %}>
+                  {{ country.name }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
         
         <input type="submit" value="Update City">  
         
